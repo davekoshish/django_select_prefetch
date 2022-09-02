@@ -1,0 +1,105 @@
+<html>
+
+<head>
+
+    <title>
+
+        test
+
+    </title>
+
+    <style>
+
+       th { text-align:left; }
+
+       table, th, td { border: 1px solid;}
+
+       h1{ color:Blue;}
+
+       #name{ width:350px;}
+
+    </style>
+
+</head>
+
+<body>
+
+<center><h1 style="margin-left:20px;">Book List</h1></center>
+
+<center>
+
+    <table>
+
+       <tr>
+
+            <th>ID</th><th id="name">Name</th><th>Author</th><th>Publication Year</th><th>Price</th>
+
+       </tr>
+
+       {% for book in dataset %}
+
+       <tr>
+
+           <td>{{book.id}} </td> <td>{{book.title}}</td> <td>{{book.author}}</td><td>{{book.published_year}}</td><td style="text-align:right">${{book.price}}</td>
+
+        </tr>
+
+          {% endfor %}
+
+
+    </table>
+
+</center>
+<br>
+<br>
+<center><h1 style="margin-left:20px;">Select Related</h1></center>
+<center>
+<table>
+
+    <tr>
+
+         <th>ID</th><th id="name">Name</th><th>Author</th><th>Publication Year</th><th>Price</th>
+
+    </tr>
+
+    {% for books in newdataset %}
+
+    <tr>
+
+        <td>{{books.name}} </td> <td>{{books.name}}</td> <td>{{books.name}}</td><td>{{books.name}}</td><td style="text-align:right">${{books.name}}</td>
+
+     </tr>
+
+       {% endfor %}
+
+
+ </table>
+</center>
+<br>
+<br>
+<center><h1 style="margin-left:20px;">Prefetch Related</h1></center>
+<center>
+    <table>
+    
+        <tr>
+    
+             <th>ID</th><th id="name">Name</th><th>Author</th><th>Publication Year</th><th>Price</th>
+    
+        </tr>
+    
+        {% for books1 in newdataset1 %}
+    
+        <tr>
+    
+            <td>{{books1.name}} </td> <td>{{books1.name}}</td> <td>{{books1.name}}</td><td>{{books1.name}}</td><td style="text-align:right">${{books1.name}}</td>
+    
+         </tr>
+    
+           {% endfor %}
+    
+    
+     </table>
+    </center>
+</body>
+
+</html>
